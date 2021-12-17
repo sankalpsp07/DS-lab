@@ -3,7 +3,7 @@ using namespace std;
 
 void add(int a[3][3], int b[3][3]){
     int c[3][3]; 
-    cout<< "Resulting array"<<endl; 
+    cout<< "Resulting array after addition"<<endl; 
      for (int i=0;i<3;i++){
       
         for (int j =0;j<3; j++) {
@@ -17,7 +17,7 @@ void add(int a[3][3], int b[3][3]){
 
 void sub(int a[3][3], int b[3][3]){
     int c[3][3]; 
-    cout<< "Resulting array"<<endl; 
+    cout<< "Resulting array for subtraction:"<<endl; 
      for (int i=0;i<3;i++){
        for (int j =0;j<3; j++) {
             
@@ -28,18 +28,21 @@ void sub(int a[3][3], int b[3][3]){
   }
 }
 
+
 void multiply(int a[3][3], int b[3][3]){ 
-    cout<< "Resulting array"<<endl; 
+    cout<< "Resulting array after multiplication"<<endl; 
      for (int i=0;i<3;i++){
        for (int j =0;j<3; j++) {
            int c[3][3]={0};
          for(int k=0;k<3;k++){ 
            
          c[i][j]+=a[i][k] * b[k][j];
-         cout<<c[i][j]<<" ";
     }
-    cout<<"\n";
+    cout<<c[i][j]<<" ";
+    
   }
+  cout<<"\n";
+}
 }
 
 int main()
@@ -58,6 +61,10 @@ int main()
             cin>>b[i][j];
         }
     }
-    add(a,b); 
+
+    add(a,b);
+    sub(a,b); 
+    multiply(a,b);
+    
     return 0;
 }
