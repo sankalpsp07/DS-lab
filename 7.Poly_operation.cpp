@@ -104,7 +104,7 @@ void addPolynomial(struct node *head1,struct node *head2){
 			ptr2=ptr2->next;
 	}
  
-    cout<<"Resultant Poly: "; 
+    cout<<"Resultant Polynomial after addition: "; 
 	print(head3);
 	
 }
@@ -127,7 +127,7 @@ void mulPolynomial(struct node *head1,struct node *head2){
  
  }
  
- cout<<"Resultant Polynomial:";
+ cout<<"Resultant Polynomial after multiplication:";
  print(head3); 
 }
 
@@ -140,8 +140,8 @@ int main()
    cout<<"For Second poly- "<<endl;
    struct node* head2=NULL;
    head2=create(head2);
-   
-  // addPolynomial(head1,head2);
+  
+  addPolynomial(head1,head2); 
   mulPolynomial(head1, head2); 
     
 
